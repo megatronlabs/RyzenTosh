@@ -29,3 +29,8 @@ Specifically
 ```
 sudo codesign -f -s - /Applications/zoom.us.app
 ```
+Microsoft Teams
+
+```
+sudo codesign --remove-signature /Applications/Microsoft\ Teams.app/Contents/Frameworks/Microsoft\ Teams\ Helper\ \(Plugin\).app 
+```
