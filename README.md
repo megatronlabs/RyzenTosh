@@ -13,7 +13,7 @@ https://github.com/megatronlabs/RyzenTosh/blob/main/AdobeFix/AdobeFix.md
 
 # OBS
 
-OBS Virtual Camera was not working in various applications (Teams, Chime, Zoom).  It has to do with a code siging issue.
+OBS Virtual Camera was not working in various applications (Teams, Chime).  It has to do with a code siging issue.
 
 ```
 020-12-18 11:18:35.473 Amazon Chime[2761:155841] Error loading /Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin/Contents/MacOS/obs-mac-virtualcam:  dlopen(/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin/Contents/MacOS/obs-mac-virtualcam, 262): no suitable image found.  Did find:
@@ -24,13 +24,14 @@ OBS Virtual Camera was not working in various applications (Teams, Chime, Zoom).
 
 Using this thead, i resolved it:  https://github.com/johnboiles/obs-mac-virtualcam/wiki/Compatibility#apps-dont-allow-dal-plugins
 
-Specifically
+Amazon Chime
 
 ```
-sudo codesign -f -s - /Applications/zoom.us.app
+sudo codesign -f -s - /Applications/Amazon\ Chime.app
 ```
 Microsoft Teams
 
 ```
-sudo codesign --remove-signature /Applications/Microsoft\ Teams.app/Contents/Frameworks/Microsoft\ Teams\ Helper\ \(Plugin\).app 
+sudo codesign --remove-signature /Applications/Microsoft\ Teams.app/Contents/Frameworks/Microsoft\ Teams\ Helper.app
+sudo codesign --remove-signature /Applications/Microsoft\ Teams.app/Contents/Frameworks/Microsoft\ Teams\ Helper\ \(Plugin\).app
 ```
