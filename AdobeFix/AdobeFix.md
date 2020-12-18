@@ -51,6 +51,6 @@ launchctl load ${AGENT} >/dev/null 2>&1
 launchctl start ${AGENT} >/dev/null 2>&1
 ```
 
-3. Reboot you Ryzentosh.
+3. Reboot your Ryzentosh.
 
 ##Credit:  https://gist.github.com/naveenkrdy/26760ac5135deed6d0bb8902f6ceb6bd
