@@ -21,6 +21,7 @@ ffor file in MMXCore FastCore TextModel libiomp5.dylib libtbb.dylib libtbbmalloc
         sudo perl -i -pe 's|\x90\x90\x90\x90\x56\xE8\x4A\x00|\x90\x90\x90\x90\x56\xE8\x1A\x00|sg' $FILE
     done
 done
+```
 2. Copy & paste the following code into a Terminal window and run it.
 
 ```
